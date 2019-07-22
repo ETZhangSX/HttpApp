@@ -1,0 +1,22 @@
+
+module HttpApp
+{
+    struct GitHubInfo 
+    {
+        1 require string source;
+        2 require int total_count;
+        3 require int closed_count;
+        4 require string avg_time;
+        5 require string most_concerned_issue;
+        6 require int comment_number;
+        7 require string issue_with_longest_handling_time;
+        8 require string longest_handling_time;
+    };
+
+    interface TarsInfo
+    {
+        int test();
+        int showInfo(string source, out GitHubInfo sRsp);
+    };
+
+}; 
